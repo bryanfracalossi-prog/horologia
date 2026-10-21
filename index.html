@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Horologia — Avaliador de Raridade</title>
+  <meta name="description" content="Catálogo e avaliador de raridade de relógios: nota de 0 a 100 por quatro critérios, ficha de negociação, laudo para imprimir, Top 100 de relógios raros, histórias de peças icônicas, horários pelo mundo e check-up de autenticidade.">
+  <meta name="theme-color" content="#f6e7bd">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Horologia">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-watches" aria-hidden="true">
+    <div class="bg-watch bg-watch-1">
+      <svg viewBox="0 0 120 120">
+        <rect x="47" y="3" width="26" height="114" rx="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <circle cx="60" cy="60" r="37" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="60" cy="60" r="29" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+        <path d="M60 36v24l13 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="60" cy="60" r="2.5" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="bg-watch bg-watch-2">
+      <svg viewBox="0 0 120 120">
+        <rect x="47" y="3" width="26" height="114" rx="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <rect x="17" y="27" width="86" height="66" rx="7" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M15 38v44M105 38v44" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <rect x="27" y="37" width="66" height="46" rx="2" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+        <path d="M60 46v16l10 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="bg-watch bg-watch-3">
+      <svg viewBox="0 0 120 120">
+        <rect x="47" y="3" width="26" height="114" rx="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <circle cx="60" cy="60" r="37" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="46" cy="49" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".75"/>
+        <circle cx="74" cy="49" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".75"/>
+        <circle cx="60" cy="74" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".75"/>
+        <path d="M60 35v25l13 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="bg-watch bg-watch-4">
+      <svg viewBox="0 0 120 120">
+        <rect x="47" y="3" width="26" height="114" rx="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <rect x="27" y="31" width="66" height="58" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <rect x="33" y="39" width="54" height="27" rx="3" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+        <text x="60" y="58" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="700" fill="currentColor">12:00</text>
+        <text x="60" y="79" text-anchor="middle" font-family="Consolas, monospace" font-size="6" fill="currentColor" opacity=".7">CHRONO</text>
+      </svg>
+    </div>
+    <div class="bg-watch bg-watch-5">
+      <svg viewBox="0 0 120 120">
+        <rect x="47" y="3" width="26" height="114" rx="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <path d="M38 22h44l16 16v44L82 98H38L22 82V38Z" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M42 31h36l11 11v36L78 89H42L31 78V42Z" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+        <circle cx="31" cy="31" r="2.2" fill="currentColor"/><circle cx="89" cy="31" r="2.2" fill="currentColor"/>
+        <circle cx="31" cy="89" r="2.2" fill="currentColor"/><circle cx="89" cy="89" r="2.2" fill="currentColor"/>
+        <path d="M60 38v22l13 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="bg-watch bg-watch-6">
+      <svg viewBox="0 0 120 120">
+        <rect x="47" y="3" width="26" height="114" rx="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <circle cx="60" cy="60" r="39" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+        <path d="M60 18v8M60 94v8M18 60h8M94 60h8M30 30l6 6M84 84l6 6M90 30l-6 6M36 84l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M60 38v22l12 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="Início">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M25 2h14l-1.6 9H26.6Z" fill="#c9a227"/>
+        <path d="M28.4 2h7.2l-.8 9h-5.6Z" fill="#fffdf8"/>
+        <path d="M25 62h14l-1.6-9H26.6Z" fill="#c9a227"/>
+        <path d="M28.4 62h7.2l-.8-9h-5.6Z" fill="#fffdf8"/>
+        <rect x="51.5" y="28.4" width="5" height="7.2" rx="1.6" fill="#c9a227"/>
+        <rect x="51.5" y="37.2" width="3.4" height="4.2" rx="1.2" fill="#c9a227"/>
+        <circle cx="32" cy="32" r="21" fill="#c9a227"/>
+        <circle cx="32" cy="32" r="18.6" fill="#fffdf8" stroke="#8a6a1a" stroke-width=".7"/>
+        <circle cx="32" cy="32" r="18.6" fill="none" stroke="#b8932f" stroke-width="1.3" stroke-dasharray=".8 2.2"/>
+        <circle cx="32" cy="32" r="13.8" fill="#fffdf8" stroke="#e2c98a" stroke-width=".7"/>
+        <circle cx="32" cy="32" r="12.3" fill="none" stroke="#c9a227" stroke-width="1.1" stroke-dasharray=".9 5.1"/>
+        <text x="32" y="21" text-anchor="middle" font-family="Georgia, serif" font-size="5.2" font-weight="700" fill="#b8932f">C</text>
+        <rect x="24.6" y="36.6" width="14.8" height="7" rx="1.3" fill="#2b251c"/>
+        <text x="32" y="41.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="3.6" font-weight="700" letter-spacing=".2" fill="#f1dc9e">C080</text>
+        <path d="M32 22.2V32l5.2 3.7" fill="none" stroke="#8a6a1a" stroke-width="1.7" stroke-linecap="round"/>
+        <circle cx="32" cy="32" r="1.5" fill="#8a6a1a"/>
+      </svg>
+      <span class="brand-text">
+        <strong>Horologia</strong>
+        <small>Avaliador de raridade</small>
+      </span>
+    </a>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="btn-menu" type="button" aria-label="Abrir menu" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>
+      </button>
+      <a class="btn btn-gold" href="#/nova">
+        <span class="plus">+</span> <span class="btn-label">Novo relógio</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <nav class="main-tabs" id="main-tabs" aria-label="Seções do app">
+      <a href="#/" data-tab="catalogo">Meu catálogo</a>
+      <a href="#/top100" data-tab="top100">Top 100</a>
+      <a href="#/historias" data-tab="historias">Histórias</a>
+      <a href="#/horarios" data-tab="horarios">Horários</a>
+    </nav>
+
+    <!-- ================= LISTA ================= -->
+    <section id="list-view" class="view is-active" aria-label="Catálogo">
+      <div class="summary">
+        <div class="stat">
+          <span class="stat-label">Peças no catálogo</span>
+          <strong class="stat-value" id="stat-total">0</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Nota média</span>
+          <strong class="stat-value" id="stat-avg">—</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Excepcionais</span>
+          <strong class="stat-value" id="stat-exc">0</strong>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 16.5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="search" type="search" placeholder="Buscar marca, modelo ou referência" aria-label="Buscar no catálogo">
+        </div>
+        <label class="sort">
+          <span>Ordenar</span>
+          <select id="sort">
+            <option value="recentes">Mais recentes</option>
+            <option value="nota-desc">Maior nota</option>
+            <option value="nota-asc">Menor nota</option>
+            <option value="marca">Marca (A–Z)</option>
+            <option value="ano-desc">Ano (mais novo)</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="chips" id="filter-chips" role="group" aria-label="Filtrar por classificação"></div>
+
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- ================= TOP 100 ================= -->
+    <section id="top100-view" class="view" aria-label="Top 100 relógios mais raros">
+      <div class="view-head top-head">
+        <span class="top-eyebrow">Ranking editorial</span>
+        <h2>Top 100</h2>
+        <p class="sub">Uma curadoria dos 100 relógios mais raros para conhecer, comparar e usar como referência. Toque em um item para ver por que ele está aqui.</p>
+      </div>
+
+      <div class="summary">
+        <div class="stat">
+          <span class="stat-label">No ranking</span>
+          <strong class="stat-value" id="top-total">100</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Nota média</span>
+          <strong class="stat-value" id="top-avg">—</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Excepcionais</span>
+          <strong class="stat-value" id="top-exc">0</strong>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 16.5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="top-search" type="search" placeholder="Buscar marca, modelo ou referência" aria-label="Buscar no Top 100">
+        </div>
+        <label class="sort">
+          <span>Marca</span>
+          <select id="top-brand">
+            <option value="todas">Todas</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="top-list-head">
+        <span id="top-count">100 relógios</span>
+        <button type="button" class="btn btn-ghost btn-sm" id="btn-share-top">Copiar link do Top 100</button>
+      </div>
+
+      <div id="top-list" class="top-list"></div>
+
+      <p class="hint top-disclaimer">A posição é uma curadoria editorial de raridade, não um preço, laudo ou ranking oficial. Use como ponto de partida para pesquisar e conversar.</p>
+    </section>
+
+    <!-- ================= HISTÓRIAS ================= -->
+    <section id="history-view" class="view" aria-label="Relógios históricos e histórias pessoais">
+      <div class="view-head history-head">
+        <span class="history-eyebrow">Museu do pulso</span>
+        <h2>Relógios históricos</h2>
+        <p class="sub">Histórias de peças que mudaram a forma de ver o tempo — e um espaço para contar a história do seu relógio, com fotos.</p>
+      </div>
+
+      <div class="history-hero">
+        <div class="history-hero-copy">
+          <span class="history-hero-kicker">A sua peça também tem história</span>
+          <h3>Como ela chegou até você?</h3>
+          <p>Compra, presente, herança ou uma descoberta. Conte o ano, o lugar, quem estava com você e o que essa peça significa.</p>
+          <div class="history-hero-actions">
+            <button class="btn btn-gold" type="button" id="btn-story-new">+ Contar minha história</button>
+            <a class="btn btn-ghost" href="#/nova">Cadastrar relógio</a>
+          </div>
+        </div>
+        <div class="history-hero-art" aria-hidden="true">
+          <svg viewBox="0 0 180 180">
+            <rect x="72" y="8" width="36" height="164" rx="16" fill="none" stroke="currentColor" stroke-width="2" opacity=".35"/>
+            <circle cx="90" cy="90" r="58" fill="#fffdf8" stroke="currentColor" stroke-width="3"/>
+            <circle cx="90" cy="90" r="48" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <path d="M90 52v38l22 14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="90" cy="90" r="4" fill="currentColor"/>
+            <path d="M28 46h22M28 58h14M132 128h22M132 140h14" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="history-section-head">
+        <div>
+          <span class="history-eyebrow">Minhas histórias</span>
+          <h3>As peças que têm dono</h3>
+        </div>
+        <span class="history-count" id="story-count">Nenhuma história sua ainda</span>
+      </div>
+      <div id="story-list" class="story-list"></div>
+
+      <div class="history-section-head history-museum-head">
+        <div>
+          <span class="history-eyebrow">Linha do tempo</span>
+          <h3>O museu do pulso</h3>
+        </div>
+        <span class="history-count" id="history-count">24 relógios na linha do tempo</span>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 16.5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="history-search" type="search" placeholder="Buscar marca, modelo ou história" aria-label="Buscar nos relógios históricos">
+        </div>
+        <label class="sort">
+          <span>Época</span>
+          <select id="history-era">
+            <option value="todas">Todas as épocas</option>
+            <option value="pre-1950">Até 1949</option>
+            <option value="1950-1969">1950–1969</option>
+            <option value="1970-1989">1970–1989</option>
+            <option value="1990">1990 em diante</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="history-list" class="history-grid"></div>
+
+      <p class="hint history-disclaimer">Os textos são resumos editoriais para conhecer a história de cada modelo. Datas, versões e detalhes podem variar conforme a fonte; confirme antes de usar como referência de compra.</p>
+    </section>
+
+    <!-- ================= HORÁRIOS ================= -->
+    <section id="time-view" class="view" aria-label="Horários e ajuste do relógio">
+      <div class="view-head">
+        <span class="history-eyebrow">Horas pelo mundo</span>
+        <h2>Acertar o relógio</h2>
+        <p class="sub">O horário de Brasília, outros fusos e um modo de acerto para sincronizar a sua peça.</p>
+      </div>
+
+      <div class="time-hero">
+        <div class="time-primary">
+          <div class="time-primary-top">
+            <span class="time-label" id="time-label">Horário de Brasília</span>
+            <label class="time-zone-picker">
+              <span>Ver fuso</span>
+              <select id="time-zone-select" aria-label="Escolher fuso horário"></select>
+            </label>
+          </div>
+          <div class="time-big" id="time-big">--:--:--</div>
+          <p class="time-date" id="time-date">—</p>
+          <div class="time-meta">
+            <span id="time-offset">UTC−3</span>
+            <span id="time-zone-note">Brasília, Brasil</span>
+          </div>
+        </div>
+
+        <div class="time-analog" aria-hidden="true">
+          <svg viewBox="0 0 200 200" id="time-analog-svg">
+            <circle cx="100" cy="100" r="92" class="time-analog-case"/>
+            <circle cx="100" cy="100" r="82" class="time-analog-dial"/>
+            <g class="time-analog-ticks">
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(0 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(30 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(60 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(90 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(120 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(150 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(180 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(210 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(240 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(270 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(300 100 100)"/>
+              <line x1="100" y1="27" x2="100" y2="35" transform="rotate(330 100 100)"/>
+            </g>
+            <text x="100" y="126" text-anchor="middle" class="time-analog-brand">HOROLOGIA</text>
+            <line id="time-hand-hour" x1="100" y1="100" x2="100" y2="58" class="time-hand time-hand-hour"/>
+            <line id="time-hand-minute" x1="100" y1="100" x2="100" y2="42" class="time-hand time-hand-minute"/>
+            <line id="time-hand-second" x1="100" y1="100" x2="100" y2="32" class="time-hand time-hand-second"/>
+            <circle cx="100" cy="100" r="4.5" class="time-pin"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="time-sync-card" id="time-sync-card">
+        <div class="time-sync-head">
+          <div>
+            <span class="history-eyebrow">Ajuste do relógio</span>
+            <h3>Use o horário do app para acertar a sua peça</h3>
+          </div>
+          <button class="btn btn-gold" id="btn-time-sync" type="button" aria-pressed="false">Iniciar modo de acerto</button>
+        </div>
+
+        <div class="time-sync-display">
+          <div>
+            <span class="time-sync-label">Horário de referência · <span id="time-sync-zone">Brasília</span></span>
+            <strong class="time-sync-clock" id="time-sync-clock">--:--:--</strong>
+          </div>
+          <span class="time-sync-pulse" id="time-sync-pulse" aria-hidden="true"></span>
+        </div>
+
+        <div class="time-sync-steps">
+          <details open>
+            <summary>Relógio analógico</summary>
+            <ol>
+              <li>Puxe a coroa até a posição de acerto das horas. Se a coroa for rosqueada, desrosqueie primeiro.</li>
+              <li>Gire os ponteiros para alguns minutos à frente do horário atual.</li>
+              <li>Quando os segundos do app chegarem em 00, empurre a coroa no horário exato.</li>
+              <li>Se a peça tiver calendário, ajuste a data com cuidado, evitando a faixa entre 21h e 3h.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Relógio digital</summary>
+            <ol>
+              <li>Entre no modo de ajuste do relógio e escolha horas e minutos.</li>
+              <li>Use o relógio grande como referência e confirme quando os segundos chegarem em 00.</li>
+              <li>Em relógios com cronômetro, zere os contadores depois do ajuste.</li>
+            </ol>
+          </details>
+        </div>
+
+        <p class="hint">O app usa o relógio do seu aparelho e as regras de fuso do navegador. Para maior precisão, mantenha o celular sincronizado com a rede. O modo de acerto é uma referência visual, não um sinal oficial de tempo.</p>
+      </div>
+
+      <div class="history-section-head time-world-head">
+        <div>
+          <span class="history-eyebrow">Fusos horários</span>
+          <h3>Outros países</h3>
+        </div>
+        <span class="history-count" id="time-count">14 fusos</span>
+      </div>
+
+      <div id="time-world-grid" class="time-world-grid"></div>
+      <p class="hint">Toque em um país para ver o horário no relógio grande. O horário de verão de cada lugar é aplicado automaticamente pelo navegador.</p>
+    </section>
+
+    <!-- ================= DETALHE ================= -->
+    <section id="detail-view" class="view" aria-label="Ficha do relógio">
+      <div id="detail"></div>
+    </section>
+
+    <!-- ================= FORMULÁRIO ================= -->
+    <section id="form-view" class="view" aria-label="Avaliação">
+      <div class="view-head">
+        <a class="back" href="#/">← Voltar</a>
+        <h2 id="form-title">Novo relógio</h2>
+        <p class="sub">Preencha a ficha e avalie cada critério de 0 a 5. A nota é calculada na hora.</p>
+      </div>
+
+      <div class="live-score" id="live-score"></div>
+
+      <div class="assist-cta">
+        <div>
+          <strong>Não sabe o que responder?</strong>
+          <span>Tenha uma sugestão de notas pela marca e referência, ou responda perguntas simples.</span>
+        </div>
+        <div class="assist-cta-actions">
+          <button type="button" class="btn btn-ghost" id="btn-assist">Avaliação assistida</button>
+          <button type="button" class="btn btn-ghost" id="btn-auth-form">Check-up de autenticidade</button>
+        </div>
+      </div>
+
+      <form id="watch-form">
+        <div class="form-grid">
+          <aside class="panel photo-col">
+            <div class="photo-preview" id="photo-preview"></div>
+            <label class="btn btn-ghost full">
+              <input type="file" id="f-photo" accept="image/*" hidden>
+              <span id="photo-btn-label">Escolher foto</span>
+            </label>
+            <button type="button" class="btn btn-ghost full" id="btn-remove-photo">Remover foto</button>
+            <p class="hint">A foto fica salva no próprio aparelho, sem enviar para nenhum servidor.</p>
+          </aside>
+
+          <div class="panel fields">
+            <div class="grid-2">
+              <label class="field"><span>Marca *</span>
+                <input id="f-marca" maxlength="60" placeholder="Rolex" required>
+              </label>
+              <label class="field"><span>Modelo *</span>
+                <input id="f-modelo" maxlength="80" placeholder="Submariner 5512" required>
+              </label>
+              <label class="field"><span>Referência</span>
+                <input id="f-referencia" maxlength="40" placeholder="5512">
+              </label>
+              <label class="field"><span>Ano</span>
+                <input id="f-ano" type="number" inputmode="numeric" min="1850" max="2100" placeholder="1962">
+              </label>
+              <label class="field"><span>Movimento</span>
+                <input id="f-movimento" maxlength="60" placeholder="Automático">
+              </label>
+              <label class="field"><span>Material da caixa</span>
+                <input id="f-caixa" maxlength="40" placeholder="Aço inox">
+              </label>
+              <label class="field"><span>Diâmetro (mm)</span>
+                <input id="f-diametro" type="number" inputmode="decimal" step="0.5" min="20" max="70" placeholder="40">
+              </label>
+              <label class="field"><span>Produção estimada (unid.)</span>
+                <input id="f-producao" type="number" inputmode="numeric" min="0" step="1" placeholder="1200">
+              </label>
+            </div>
+            <label class="field"><span>Observações</span>
+              <textarea id="f-notas" rows="3" maxlength="1200" placeholder="Histórico da peça, detalhes do mostrador, condições..." ></textarea>
+            </label>
+          </div>
+        </div>
+
+        <fieldset class="panel criteria">
+          <legend>Critérios de raridade</legend>
+          <p class="hint">0 = não se aplica ou desconhecido · 5 = excepcional. Cada critério tem um peso na nota final.</p>
+          <div id="criteria-list" class="criteria-grid"></div>
+        </fieldset>
+
+        <div class="panel">
+          <label class="switch">
+            <input type="checkbox" id="f-neg-ativa">
+            <span>Peça em avaliação para negócio</span>
+          </label>
+          <div id="neg-fields" class="grid-2 hidden">
+            <label class="field"><span>Cliente / vendedor</span>
+              <input id="f-cliente" maxlength="80" placeholder="Nome de quem está negociando">
+            </label>
+            <label class="field"><span>Situação</span>
+              <select id="f-status">
+                <option>Em análise</option>
+                <option>Negociando</option>
+                <option>Comprado</option>
+                <option>Vendido</option>
+                <option>Recusado</option>
+              </select>
+            </label>
+            <label class="field"><span>Preço pedido (R$)</span>
+              <input id="f-pedido" type="number" inputmode="numeric" min="0" step="1" placeholder="35000">
+            </label>
+            <label class="field"><span>Valor estimado (R$)</span>
+              <input id="f-estimado" type="number" inputmode="numeric" min="0" step="1" placeholder="30000">
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-gold">Salvar avaliação</button>
+          <button type="button" class="btn btn-ghost" id="btn-cancel">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ================= MENU ================= -->
+  <dialog id="menu-dialog" class="sheet">
+    <div class="sheet-head">
+      <h3>Menu</h3>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+    <div class="sheet-list">
+      <button type="button" id="btn-install" class="sheet-item" hidden>Instalar no aparelho</button>
+      <button type="button" id="btn-assist-menu" class="sheet-item">Avaliação assistida (marca/referência ou perguntas)</button>
+      <button type="button" id="btn-auth-menu" class="sheet-item">Check-up de autenticidade (roteiro e fotos)</button>
+      <button type="button" id="btn-top100-menu" class="sheet-item">Top 100 — relógios mais raros</button>
+      <button type="button" id="btn-story-menu" class="sheet-item">Relógios históricos e minhas histórias</button>
+      <button type="button" id="btn-time-menu" class="sheet-item">Horários pelo mundo e ajuste do relógio</button>
+      <button type="button" id="btn-export" class="sheet-item">Exportar backup (.json)</button>
+      <button type="button" id="btn-import" class="sheet-item">Importar backup</button>
+      <button type="button" id="btn-demo" class="sheet-item">Remover peças de exemplo</button>
+      <button type="button" id="btn-about" class="sheet-item">Como a nota é calculada</button>
+    </div>
+    <p class="hint sheet-foot">Dados salvos apenas neste aparelho. Faça backup antes de trocar de celular.</p>
+  </dialog>
+
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+
+  <!-- ================= COMPARTILHAR ================= -->
+  <dialog id="share-dialog" class="sheet">
+    <div class="sheet-head">
+      <h3>Compartilhar ficha</h3>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+
+    <p class="about-text">O link leva a ficha completa (foto, nota e critérios) para quem você enviar. Não inclui preço, dados de negociação nem a sua história pessoal.</p>
+
+    <label class="field"><span>Seu nome / apelido na ficha</span>
+      <input id="share-author" maxlength="40" placeholder="Ex.: Bryan">
+    </label>
+
+    <label class="field" style="margin-top:12px"><span>Link público</span>
+      <textarea id="share-url" rows="3" readonly></textarea>
+    </label>
+
+    <p class="hint" id="share-size" style="margin-top:8px"></p>
+    <p class="hint share-warning" id="share-warning" hidden>
+      Este link aponta para o seu computador e só abre no mesmo Wi-Fi. Para enviar a qualquer pessoa, use “Baixar ficha (.html)” ou publique o app na internet.
+    </p>
+
+    <div class="form-actions">
+      <button class="btn btn-gold" type="button" id="btn-copy-link">Copiar link</button>
+      <button class="btn btn-ghost" type="button" id="btn-download-ficha">Baixar ficha (.html)</button>
+    </div>
+    <button class="btn btn-ghost full" type="button" id="btn-native-share" style="margin-top:8px">Compartilhar pelo celular…</button>
+  </dialog>
+
+  <!-- ================= AVALIAÇÃO ASSISTIDA ================= -->
+  <dialog id="assist-dialog" class="sheet sheet-wide">
+    <div class="sheet-head">
+      <h3>Avaliação assistida</h3>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+
+    <div id="assist-home" class="assist-view">
+      <p class="about-text">Escolha como quer ajuda. Você sempre revisa tudo antes de salvar — a sugestão não altera nada sozinha.</p>
+
+      <button class="assist-option" type="button" data-assist-mode="ref">
+        <strong>Sugestão por marca e referência</strong>
+        <span>Base offline com modelos comuns. Mostra uma estimativa das notas e o que conferir na peça. Não precisa de internet nem de chave.</span>
+      </button>
+
+      <button class="assist-option" type="button" data-assist-mode="quiz">
+        <strong>Responder perguntas simples</strong>
+        <span>Seis perguntas com opções detalhadas sobre a peça. Funciona sem internet.</span>
+      </button>
+
+      <p class="hint">As sugestões são estimativas para o modelo, não uma avaliação da peça. Confirme referência, originalidade e procedência antes de negociar.</p>
+    </div>
+
+    <div id="assist-ref" class="assist-view" hidden>
+      <button class="assist-back" type="button" data-assist-back>← Voltar</button>
+
+      <p class="about-text">Digite a marca e o modelo ou a referência que aparece na peça. A base procura o modelo e sugere as notas dos critérios.</p>
+
+      <div class="grid-2">
+        <label class="field"><span>Marca</span>
+          <input id="assist-marca" maxlength="60" placeholder="Rolex" autocomplete="off">
+        </label>
+        <label class="field"><span>Modelo ou referência</span>
+          <input id="assist-modelo" maxlength="80" placeholder="Submariner 5513" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-gold" type="button" id="btn-ref-search">Buscar sugestão</button>
+      </div>
+      <p class="hint" id="assist-ref-status"></p>
+      <div id="assist-ref-results"></div>
+    </div>
+
+    <div id="assist-quiz" class="assist-view" hidden>
+      <button class="assist-back" type="button" data-assist-back>← Voltar</button>
+      <p class="about-text">Responda com o que você sabe. Pode marcar “não sei” — a sugestão fica mais cautelosa.</p>
+      <div id="quiz-list" class="quiz-list"></div>
+      <div class="form-actions">
+        <button class="btn btn-gold" type="button" id="btn-quiz-run">Ver sugestão</button>
+      </div>
+    </div>
+
+    <div id="assist-result" class="assist-view" hidden>
+      <button class="assist-back" type="button" data-assist-back>← Voltar</button>
+      <div id="assist-result-body"></div>
+      <div class="form-actions">
+        <button class="btn btn-gold" type="button" id="btn-assist-apply">Aplicar na ficha</button>
+        <button class="btn btn-ghost" type="button" data-close-dialog>Descartar</button>
+      </div>
+      <p class="hint">Aplicar preenche as notas dos critérios e completa os dados de identificação que estiverem vazios. Revise tudo antes de salvar.</p>
+    </div>
+  </dialog>
+
+  <!-- ================= CHECK-UP DE AUTENTICIDADE ================= -->
+  <dialog id="auth-dialog" class="sheet sheet-wide auth-dialog">
+    <div class="sheet-head">
+      <div>
+        <span class="history-dialog-kicker">Apoio à inspeção</span>
+        <h3>Check-up de autenticidade</h3>
+      </div>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+
+    <p class="about-text">Use este roteiro para olhar a peça com calma e pedir fotos melhores. Ele não confirma autenticidade, não dá nota e não substitui um relojoeiro ou especialista.</p>
+
+    <div class="grid-2">
+      <label class="field"><span>Marca</span>
+        <input id="auth-marca" maxlength="60" placeholder="Rolex" autocomplete="off">
+      </label>
+      <label class="field"><span>Modelo ou referência</span>
+        <input id="auth-modelo" maxlength="80" placeholder="Submariner 5512" autocomplete="off">
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-gold" type="button" id="btn-auth-search">Ver pontos do modelo</button>
+    </div>
+
+    <div id="auth-model-box" class="auth-model-box" hidden></div>
+
+    <div class="auth-photo-head">
+      <div>
+        <span class="history-eyebrow">Fotos para inspeção</span>
+        <h4>Fotografe os detalhes</h4>
+      </div>
+      <label class="btn btn-ghost auth-photo-add">
+        <input type="file" id="auth-photo-input" accept="image/*" multiple hidden>
+        Adicionar fotos
+      </label>
+    </div>
+    <p class="hint">Frente, fundo, coroa, bracelete/fecho, movimento e documentos. As fotos ficam só nesta sessão: não são enviadas nem salvas no aparelho.</p>
+    <div id="auth-photo-grid" class="auth-photo-grid"></div>
+
+    <div class="auth-section-head">
+      <h4>Roteiro de inspeção</h4>
+      <span id="auth-check-count">0 de 10 conferidos</span>
+    </div>
+    <div id="auth-checklist" class="auth-checklist"></div>
+
+    <details class="auth-details" open>
+      <summary>Sinais de alerta</summary>
+      <ul>
+        <li>Preço muito abaixo do mercado ou pressa para fechar negócio.</li>
+        <li>Vendedor evita fotos nítidas, vídeos ou detalhes do fundo e do movimento.</li>
+        <li>Referência e número de série não combinam com o modelo ou com o ano.</li>
+        <li>Logo torto, texto borrado, fonte errada ou marcadores desalinhados.</li>
+        <li>Peças de versões diferentes misturadas na mesma caixa.</li>
+        <li>Caixa refundida, polimento excessivo ou gravações apagadas.</li>
+        <li>Movimento sem relação com o calibre esperado para a época.</li>
+        <li>Documentos “perfeitos” demais, sem histórico ou com dados que não conferem.</li>
+      </ul>
+    </details>
+
+    <details class="auth-details">
+      <summary>O que fazer antes de comprar</summary>
+      <ul>
+        <li>Compare com fotos oficiais e com exemplares conhecidos do mesmo ano e versão.</li>
+        <li>Peça fotos macro do mostrador, da coroa, do fundo, do fecho e do movimento.</li>
+        <li>Leve a peça a um relojoeiro de confiança ou a um especialista na marca.</li>
+        <li>Confirme referência, número de série e histórico de manutenção por escrito.</li>
+        <li>Pesquise preço em mais de uma fonte e desconfie de oportunidades boas demais.</li>
+        <li>Se a compra for alta, peça um laudo presencial antes de pagar.</li>
+      </ul>
+    </details>
+
+    <p class="hint auth-disclaimer">Este check-up é um roteiro de inspeção visual. Ele não identifica uma réplica com certeza, não emite laudo e não garante procedência. Em peças de alto valor, procure um profissional.</p>
+
+    <div class="form-actions">
+      <button class="btn btn-ghost" type="button" id="btn-auth-copy">Copiar roteiro</button>
+      <button class="btn btn-gold" type="button" data-close-dialog>Fechar</button>
+    </div>
+  </dialog>
+
+  <!-- ================= HISTÓRIA EDITORIAL ================= -->
+  <dialog id="history-dialog" class="sheet sheet-wide history-dialog">
+    <div class="sheet-head">
+      <div>
+        <span class="history-dialog-kicker" id="history-dialog-kicker"></span>
+        <h3 id="history-dialog-title">História</h3>
+      </div>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+    <div id="history-dialog-body"></div>
+  </dialog>
+
+  <!-- ================= MINHA HISTÓRIA ================= -->
+  <dialog id="story-dialog" class="sheet sheet-wide story-dialog">
+    <div class="sheet-head">
+      <div>
+        <span class="history-dialog-kicker" id="story-dialog-kicker"></span>
+        <h3 id="story-dialog-title">Contar a história</h3>
+      </div>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+    <div id="story-form-body"></div>
+  </dialog>
+
+  <!-- ================= FOTO AMPLIADA ================= -->
+  <dialog id="photo-dialog" class="photo-dialog">
+    <button class="icon-btn photo-dialog-close" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    <img id="photo-full" alt="">
+    <p id="photo-caption"></p>
+  </dialog>
+
+  <!-- ================= SOBRE A NOTA ================= -->
+  <dialog id="about-dialog" class="sheet">
+    <div class="sheet-head">
+      <h3>Como a nota é calculada</h3>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Fechar">✕</button>
+    </div>
+    <p class="about-text">Cada critério recebe uma nota de 0 a 5. O app multiplica essa nota pelo peso do critério e soma tudo, chegando a uma nota de 0 a 100.</p>
+    <ul class="weights" id="weights-list"></ul>
+    <p class="about-text">Classificação final:</p>
+    <ul class="weights" id="classes-list"></ul>
+    <p class="hint">A nota é uma ferramenta de apoio à sua análise. Ela não substitui avaliação presencial nem laudo de especialista.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="reference.js" defer></script>
+  <script src="ranking.js" defer></script>
+  <script src="history.js" defer></script>
+  <script src="time.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

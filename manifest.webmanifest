@@ -1,0 +1,25 @@
+{
+  "name": "Horologia — Avaliador de Raridade",
+  "short_name": "Horologia",
+  "description": "Catálogo e avaliador de raridade de relógios: nota de 0 a 100, ficha de negociação, laudo para imprimir, Top 100, histórias de peças icônicas, horários pelo mundo e check-up de autenticidade.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6e7bd",
+  "theme_color": "#f6e7bd",
+  "categories": ["lifestyle", "productivity", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Novo relógio", "short_name": "Novo", "url": "./#/nova" },
+    { "name": "Top 100", "short_name": "Top 100", "url": "./#/top100" },
+    { "name": "Histórias", "short_name": "Histórias", "url": "./#/historias" },
+    { "name": "Horários", "short_name": "Horários", "url": "./#/horarios" }
+  ]
+}

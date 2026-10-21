@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Prévia mobile — Top 100 aberto</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #05070a; font-family: system-ui, sans-serif; color: #8b95a1; gap: 14px; }
+    .frame { width: 390px; height: 844px; border: 10px solid #1a232c; border-radius: 40px; overflow: hidden; box-shadow: 0 30px 80px -30px #000; background: #080b0f; }
+    iframe { width: 100%; height: 100%; border: 0; display: block; }
+    p { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin: 0; }
+  </style>
+</head>
+<body>
+  <p>Prévia iPhone 390 × 844 — item aberto</p>
+  <div class="frame"><iframe id="app-frame" src="../index.html?v=7#/top100" title="Prévia mobile do Top 100 aberto"></iframe></div>
+  <script>
+    const frame = document.getElementById('app-frame');
+    frame.addEventListener('load', () => {
+      setTimeout(() => {
+        try {
+          const win = frame.contentWindow;
+          const doc = frame.contentDocument;
+          win.scrollTo(0, 0);
+          doc.documentElement.scrollTop = 0;
+          doc.body.scrollTop = 0;
+          const row = doc.querySelector('#top-list .top-row');
+          if (row) row.click();
+          setTimeout(() => win.scrollTo(0, 0), 200);
+        } catch (e) { /* prévia local */ }
+      }, 800);
+    });
+  </script>
+</body>
+</html>

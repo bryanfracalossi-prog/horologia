@@ -1,0 +1,20 @@
+# Sistema e editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Dependências e build
+node_modules/
+dist/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Variáveis de ambiente e configurações locais
+.env
+.env.*
+*.local
