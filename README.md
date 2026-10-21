@@ -4,7 +4,8 @@ Aplicativo web (PWA) para catalogar relógios, dar uma **nota de raridade de 0 a
 
 ## Como abrir
 
-- **Publicado (link temporário):** enquanto o computador estiver ligado e o servidor rodando, use o endereço do túnel Cloudflare informado no chat.
+- **Online:** [bryanfracalossi-prog.github.io/horologia](https://bryanfracalossi-prog.github.io/horologia/)
+- **Código-fonte:** [github.com/bryanfracalossi-prog/horologia](https://github.com/bryanfracalossi-prog/horologia)
 - **No seu computador:** execute `serve.ps1` (PowerShell) e abra `http://localhost:8080`.
 - **Sem internet:** depois de abrir uma vez, o app funciona offline pelo cache do navegador.
 
